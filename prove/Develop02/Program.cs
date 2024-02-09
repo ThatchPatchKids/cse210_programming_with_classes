@@ -66,9 +66,6 @@ class Program
                     // Get the response from the user.
                     string response = Console.ReadLine();
 
-                    // Get the date of the entry.
-                    entry.GetDate();
-
                     // Call the SavePromptedResponse() method.
                     entry.SavePromptedResponse(prompt, response);
 

@@ -9,13 +9,14 @@ public class Entry
     public Dictionary<string, string> _promptedResponses = new Dictionary<string, string>();
 
     // String to store the date of an entry/entries.
-    public string _date = "";
+    public string _date;
 
     // Member functions/ Methods:
 
     // Construtor method.
     public Entry()
     {
+        GetDate();
     }
 
     //
@@ -25,7 +26,7 @@ public class Entry
     }
 
     // Method for getting the current date.
-    public void GetDate()
+    private void GetDate()
         {
             DateTime currentTime = DateTime.Now;
             _date = currentTime.ToShortDateString();

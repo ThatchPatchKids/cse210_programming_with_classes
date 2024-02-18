@@ -1,0 +1,37 @@
+*****************************************************************
+Class: Reference
+Attributes:
+* _hasRead : boolean
+* _book : string
+* _chapter : string
+* _verse : string
+* _scripture : Scripture 
+---------------------------------
+Behaviors:
+* DisplayScripture() : void
+* IsHidden() : boolean
+*****************************************************************
+
+*****************************************************************
+Class: Scripture
+Attributes:
+* _words : list<Word>
+---------------------------------
+Behaviors:
+* DisplayWords() : void
+* HideWords() : void
+* AreHidden() : boolean
+*****************************************************************
+
+*****************************************************************
+Class: Word
+Attributes:
+* _word : string
+* _hiddenWord : string
+* _hidden : boolean
+---------------------------------
+Behaviors:
+* HideWord() : void
+* IsHidden() : boolean 
+* DisplayWord() : void
+*****************************************************************

@@ -1,0 +1,71 @@
+
+class: ActivityMenu
+Attributes:
+* _menuOptions : List<string>
+* _choice : int
+* _reflection : Reflection
+* _listing : Listing 
+* _breathing : Breathing
+
+Behaviors:
+* DisplayOptions() : void
+* ChooseActivity() : void
+* DoActivity() : bool
+* RunMenu() : void
+
+
+class: Activity
+Attributes:
+* _name : string
+* _description : string
+* _duration : int
+* _welcomeMessage : string
+* _endMessage : string
+* _summaryMessage : string
+
+Behaviors:
+* SetWelcomeMessage() : void
+* DisplayWelcomeMessage() : void
+* SetDescription() : void 
+* DisplayDescription() : void
+* SetDuration() : void
+* GetDuration() : int
+* SpinAnimation() : void
+* SetSummaryMessage() : void
+* StartActivity() : void
+* DisplayActivity : void
+* DisplayEndMessage() : void
+* DisplaySummary() : void
+* RunActivity() : void
+
+
+class: Breathing : Activity
+Attributes:
+N/A
+
+Behaviors:
+* Override DisplayActivity() : void
+
+
+class: Reflection : Activity
+Attributes:
+* _usedIndices : Set<int>
+* _prompts : List<string>
+* _questions : List<string>
+
+Behaviors:
+* Override DisplayActivity() : void
+* GetRandomPrompt() : string
+* DisplayRandomPrompt() : void
+* GetRandomQuestion() : string
+* DisplayRandomQuestion() : void
+
+
+class: Listing : Activity
+Attributes:
+* _prompts : List<string>
+
+Behaviors:
+* Override DisplayActivity() : void
+* GetRandomPrompt() : string
+* DisplayRandomPrompt() : void

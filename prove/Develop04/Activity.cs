@@ -63,9 +63,9 @@ public class Activity
             "|",
             "/"
         };
-        DateTime currentTime = DateTime.Now;
-        DateTime futureTime = currentTime.AddSeconds(spinDuration);
-        while (currentTime < futureTime)
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(spinDuration);
+        while (DateTime.Now < futureTime)
         {
             foreach (string spin in spins)
             {
@@ -73,8 +73,24 @@ public class Activity
                 Thread.Sleep(250);
                 Console.Write("\b \b");
             }
-            currentTime = DateTime.Now;
         }
+
+        // Other idea:
+        // startTime = DateTime.Now;
+        // futureTime = startTime.AddSeconds(spinDuration);
+        // int i = 0;
+        // while (DateTime.Now < futureTime)
+        // {
+        //     Console.Write(spins[i]);
+        //     Thread.Sleep(250);
+        //     Console.Write("\b \b");
+        //     i++;
+
+        //     if (i >= spins.Count)
+        //     {
+        //         i = 0;
+        //     }
+        // }
     }
 
     private void SetSummaryMessage()

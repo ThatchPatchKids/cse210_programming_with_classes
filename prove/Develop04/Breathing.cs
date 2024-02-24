@@ -8,9 +8,9 @@ public class Breathing : Activity
 
     protected override void DisplayActivity()
     {
-        DateTime currentTime = DateTime.Now;
-        DateTime futureTime = currentTime.AddSeconds(base.GetDuration());
-        while (currentTime < futureTime)
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(base.GetDuration());
+        while (DateTime.Now < futureTime)
         {
             Console.WriteLine("\n");
             Console.Write("Breathe in...");
@@ -28,7 +28,6 @@ public class Breathing : Activity
                 Thread.Sleep(800);
                 Console.Write("\b \b");
             }
-            currentTime = DateTime.Now;
         }
         Console.WriteLine();
     }

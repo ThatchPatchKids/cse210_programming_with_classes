@@ -31,15 +31,14 @@ public class Listing : Activity
                 Console.Write("\b \b");
             }
         Console.WriteLine();
-        DateTime currentTime = DateTime.Now;
-        DateTime futureTime = currentTime.AddSeconds(base.GetDuration());
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(base.GetDuration());
         int itemCounter = 0;
-        while (currentTime < futureTime)
+        while (DateTime.Now < futureTime)
         {
             Console.Write("> ");
             Console.ReadLine();
             itemCounter += 1;
-            currentTime = DateTime.Now;
         }
         Console.WriteLine($"You listed {itemCounter} items!");
     }

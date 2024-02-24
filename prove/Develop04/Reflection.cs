@@ -48,14 +48,13 @@ public class Reflection : Activity
                 Console.Write("\b \b");
             }
         Console.Clear();
-        DateTime currentTime = DateTime.Now;
-        DateTime futureTime = currentTime.AddSeconds(base.GetDuration());
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(base.GetDuration());
 
-        while (currentTime < futureTime)
+        while (DateTime.Now < futureTime)
         {
             DisplayRandomQuestion();
             Console.WriteLine();
-            currentTime = DateTime.Now;
         }
     }
 

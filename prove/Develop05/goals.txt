@@ -1,0 +1,3 @@
+-300
+NegativeGoal~Sleep In~Dont sleep in~-80~5
+ChecklistGoal~Pray~say a prayer~50~1000~10~2

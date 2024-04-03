@@ -1,0 +1,63 @@
+
+class: GoalTracker
+Attributes:
+* _menuOptions : List<string>
+* _goalTypes : List<string>
+* _choice : int
+* _type : int
+* _points : int
+* _goals : List<Goal>
+
+Behaviors:
+* DisplayPoints() : void
+* CalculatePoints() : void
+* DisplayOptions() : void
+* SetChoice() : void
+* DisplayGoals() : void
+* DisplayTypes() : void
+* SetType() : void
+* CreateGoal() : void
+* SaveGoals() : void
+* LoadGoals() : void
+* RecordEvent() : void
+* RunGoalTracker() : void
+
+
+class: Goal
+Attributes:
+* _achieved : bool
+* _name : string
+* _description : string
+* _points : int
+
+Behaviors:
+* GetName() : string
+* GetDescription() : string
+* GetPoints() : int
+* SetAchieved() : void
+* GetAchieved() : bool
+* DisplayGoal() : void
+
+
+class: SimpleGoal
+Behaviors:
+* ToString() : string
+
+
+class: EternalGoal
+Behaviors:
+* ToString() : string
+* DisplayGoal() : void
+
+
+class: ChecklistGoal
+Attributes:
+* _timesTotal : int
+* _timesAchieved : int
+* _bonusPoints : int
+
+Behaviors:
+* ToString() : string
+* SetAchieved() : void
+* GetPoints() : int
+* DisplayGoal() : void

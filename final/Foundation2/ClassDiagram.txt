@@ -1,0 +1,51 @@
+class: Order
+Attributes:
+* _products : List<Product>
+* _customer : Customer
+
+Behaviors:
+* AddProduct() : void   
+* GetCost() : double
+* GetPackingLabel() : string
+* GetShippingLabel() : string
+* GetShippingCost() : int   
+* GetTotalPrice() : double
+* DisplayOrders() : void
+
+
+class: Product
+Attributes:
+* _name : string
+* _productID : string
+* _price : double
+* _quantity : int
+
+Behaviors:
+* GetTotalCost() : double
+* GetProductName() : string
+* GetProductID() : string
+
+
+class: Customer
+Attributes:
+* _name : string
+* _address : Address
+
+Behaviors:
+* IsResident() : bool
+* GetName() : string
+* GetAddress() : string
+
+
+class: Address
+Attributes:
+* _street : string
+* _city : string
+* _state : string
+* _country : string
+
+Behaviors:
+* IsFromUSA() : bool
+* GetAddress() : string
+
+

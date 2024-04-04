@@ -1,0 +1,37 @@
+class: Video    
+Attributes:
+* _title : string
+* _author : string
+* _length : int
+* _comments : List<Comment>
+
+Behaviors:
+* GetNumberComments() : int 
+* DisplayComments() : void
+* DisplayVideo() : void
+* AddComment() : void
+* AddComments() : void
+* GetComments() : List<Comment>
+* ToString() : string
+
+
+class: Comment
+Attributes:
+* _name : string
+* _text : string
+
+Behaviors:
+* DisplayComment() : void
+* GetComment() : string
+
+
+class: VideoTracker
+Attributes:
+* _videos : List<Video>
+
+Behaviors:
+* DisplayVideos() : void 
+* AddVideo() : void 
+* AddVideos() : void 
+* SaveVideos() : void 
+* LoadVideos() : void 

@@ -1,0 +1,53 @@
+class: Activity
+Attributes:
+* _date : DateTime
+* _length : int
+
+Behaviors:
+* GetLength() : int
+* GetDate() : string    
+* GetDistance() : double
+* GetSpeed() : double
+* GetPace() : double
+* GetSummary() : string
+
+
+class: Running : Activity
+Attributes:
+* _distance : double
+
+Behaviors:
+* GetDistance() : double
+* GetSpeed() : double
+* GetPace() : double
+
+
+class: Cycling : Activity
+Attributes:
+* _speed : double
+
+Behaviors:
+* GetDistance() : double
+* GetSpeed() : double
+* GetPace() : double
+
+
+class: Swimming : Activity
+Attributes:
+* _laps : int
+
+Behaviors:
+* GetDistance() : double
+* GetSpeed() : double
+* GetPace() : double
+
+
+class: ExerciseTracker
+Attributes:
+* _activities : List<Activity>
+
+Behaviors:
+* AddActivity() : void
+* DisplaySummaries() : void
+* ChooseActivity() : void
+

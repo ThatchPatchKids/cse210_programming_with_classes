@@ -1,0 +1,52 @@
+class: Event
+Attributes:
+* _title : string
+* _description : string
+* _date : string
+* _time : string
+* _address : Address
+
+Behaviors:
+* DisplayStandardDetails() : void
+* DisplayFullDetails() : void
+* DisplayShortDescription() : void
+
+
+class: Lecture : Event
+Attributes:
+* _speaker : string
+* _capacity : int
+
+Behaviors:
+* SetSpeaker()
+* DisplayFullDetails()
+
+
+class: Reception : Event
+Attributes:
+* _guests : List<string>
+
+Behaviors:
+* AddGuest() : void
+* DisplayFullDetails() : void
+
+
+class: OutdoorGathering : Event
+Attributes:
+* _forecast : string
+
+Behaviors:
+* SetForecast() : void
+* GetForecast() : string
+* DisplayFullDetails() : void
+
+
+class: Address
+Attributes:
+* _street : string
+* _city : string
+* _state : string
+
+Behaviors:
+* GetAddress() : string
+
